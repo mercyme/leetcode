@@ -10,7 +10,7 @@ var singleNumber = function(nums) {
         return nums[0];
     }
     for (i = 0; i < length; i++) {
-        result = result ^ nums[i];
+        result = result ^ nums[i];// xor 运算
     }
     return result;
 };
