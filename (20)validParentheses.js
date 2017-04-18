@@ -14,7 +14,7 @@
      if(!stack.length){
        stack.push(c);
      } else {
-       if(c === valid[stack[stack.length-1]]){
+       if(c === valid[stack[stack.length-1]]){//check the latest one in stack
          stack.pop();
        }
        else{
