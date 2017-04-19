@@ -33,7 +33,6 @@
        curr.next = node;
        curr = curr.next;
      }
-   }
-   
+   } 
    return head;
  }
