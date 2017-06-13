@@ -5,6 +5,7 @@
  var results, subSets, len;
  
  function subsetsHelper(nums, startIndex){
+  // doing deep clone here
    var lastRecursion = subSets.map((item) => item);
     //OR:    var lastRecursion = JSON.parse(JSON.stringify(subSets)); (this change made this algorithm beats 95% of others...)
    results.push(lastRecursion);
