@@ -17,15 +17,18 @@ var numbers=[2, 7, 11, 15];
 var target = 9;
 
 var twoSum = function(nums, target) {
-    var hash=[];
-    for(var i = 0;i<nums.length;i++){
-        hash[nums[i]] = i;
+    var map = [], result = [];
+    if(nums === null || nums.length === 0){
+      return result;
     }
-    for(i=0;i<nums.length;i++){
-        var needed = target-nums[i];
-        if(hash.hasOwnProperty(needed) && i!=hash[needed]){
-            return [i+1,hash[needed]+1];
-        }
+    for(let i = 0;i < nums.length; i++){
+      if(map[nums[i]] !== null){
+        result[0] = map[nums[i]];
+        result[1] = i;
+          break;
+      } else {
+        map[target - nums[i]] = i;
+      }
     }
+   return result;     
 };
-alert(twoSum(numbers, target));
