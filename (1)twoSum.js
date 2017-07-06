@@ -22,7 +22,7 @@ var twoSum = function(nums, target) {
       return result;
     }
     for(let i = 0;i < nums.length; i++){
-      if(map[nums[i]] !== null){
+      if(map[nums[i]] != null){
         result[0] = map[nums[i]];
         result[1] = i;
           break;
