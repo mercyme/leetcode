@@ -1,6 +1,9 @@
 /* LRU : least frequently used
   Time complexity: O(1)  map
   Space complexity: O(n) doubly-linked list
+  It is implemented by using doubly-linked list
+  The head is used the least frequently and the tail is used the most frequently
+  
 */
 var DoublyLinkedNode = function(key, value){
 	return {'key': key,
