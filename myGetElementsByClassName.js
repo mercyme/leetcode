@@ -1,5 +1,5 @@
 function myGetElementsByClassName(name) {
-    var arr = [], document = this.document.body;
+    var arr = [], root = this.document.body;
     var match = function(node) {
         do {
             if(node.nodeType == 1 && node.classList && node.classList.contains(node))
@@ -9,6 +9,6 @@ function myGetElementsByClassName(name) {
         }
         while (node = node.nextSibling);
     }
-    match(document);
+    match(root);
     return arr;
 }
