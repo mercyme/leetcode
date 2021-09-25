@@ -8,6 +8,7 @@ var subsetsWithDup = function(nums) {
     results.push(subSet.concat());
    
     for(let i = index; i < nums.length; i++) {
+      if(i > index && nums[i] === nums[i-1]) continue;
       subSet.push(nums[i]);
       helper(nums, i+1,subSet);
       subSet.pop():
